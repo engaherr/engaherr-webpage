@@ -1,22 +1,27 @@
 ## Development
 
-When starting the dev server, use background mode:
+Start the dev server in background mode:
 
 ```
 astro dev --background
 ```
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Manage it with `astro dev stop`, `astro dev status`, `astro dev logs`. The dev server listens at `localhost:4321`.
 
-## Documentation
+## Stack
 
-Full documentation: https://docs.astro.build
+- Astro 7.x (ESM, single-page starter at `src/pages/index.astro`)
+- TypeScript with `astro/tsconfigs/strictest` — `.astro/` is gitignored (generated types)
+- No tests, lint, formatter, or CI configured. `package.json` scripts are only `dev`, `build`, `preview`, `astro`.
+- Node engine: `>=22.12.0` (enforced by `package.json`)
 
-Consult these guides before working on related tasks:
+## Tailwind gotcha
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+`package.json` lists `"tailwind": "^4.0.0"` as a dependency, but the npm package is `tailwindcss` and nothing is wired into `astro.config.mjs` (no `@tailwindcss/vite` plugin). Tailwind is not actually active — fix the dependency name and add the Vite plugin before relying on Tailwind classes.
+
+## Layout
+
+- Pages: `src/pages/` (only `index.astro`)
+- Components: `src/components/` (only `Welcome.astro`)
+- Layouts: `src/layouts/Layout.astro`
+- Static assets: `public/`, component-scoped assets: `src/assets/`
