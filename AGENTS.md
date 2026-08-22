@@ -1,27 +1,18 @@
-## Development
+# Development
 
-Start the dev server in background mode:
+- Requires Node `>=22.12.0`; use npm with the committed `package-lock.json`.
+- Install dependencies with `npm install`.
+- Run the foreground dev server with `npm run dev` at `http://localhost:4321`.
+- For a background server use `npm run astro -- dev --background`; manage it with `npm run astro -- dev stop`, `status`, or `logs`.
+- Run `npm run astro -- check` and `npm run build` for focused validation. Run `npm run preview` only after building.
+- No tests, linting, formatting, or CI configuration is present.
 
-```
-astro dev --background
-```
+# Structure
 
-Manage it with `astro dev stop`, `astro dev status`, `astro dev logs`. The dev server listens at `localhost:4321`.
+- This is an Astro 7.x ESM app. The entry page is `src/pages/index.astro`, which composes `src/layouts/Layout.astro` and `src/components/Welcome.astro`.
+- `Layout.astro` imports `src/styles/global.css`; `src/assets/` contains bundled assets and `public/` contains static root files.
+- TypeScript extends `astro/tsconfigs/strictest`; `.astro/` contains generated types and `dist/` contains build output. Both are ignored.
 
-## Stack
+# Styling
 
-- Astro 7.x (ESM, single-page starter at `src/pages/index.astro`)
-- TypeScript with `astro/tsconfigs/strictest` — `.astro/` is gitignored (generated types)
-- No tests, lint, formatter, or CI configured. `package.json` scripts are only `dev`, `build`, `preview`, `astro`.
-- Node engine: `>=22.12.0` (enforced by `package.json`)
-
-## Tailwind gotcha
-
-`package.json` lists `"tailwind": "^4.0.0"` as a dependency, but the npm package is `tailwindcss` and nothing is wired into `astro.config.mjs` (no `@tailwindcss/vite` plugin). Tailwind is not actually active — fix the dependency name and add the Vite plugin before relying on Tailwind classes.
-
-## Layout
-
-- Pages: `src/pages/` (only `index.astro`)
-- Components: `src/components/` (only `Welcome.astro`)
-- Layouts: `src/layouts/Layout.astro`
-- Static assets: `public/`, component-scoped assets: `src/assets/`
+- Tailwind CSS v4 is active through `@tailwindcss/vite` in `astro.config.mjs` and `@import "tailwindcss"` in `src/styles/global.css`.
