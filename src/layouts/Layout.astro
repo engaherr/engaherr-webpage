@@ -1,27 +1,56 @@
 ---
-import '../styles/global.css';
+import '../../input.css';
+import { content } from '../data/content';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title = content.es.meta.title, description = content.es.meta.description } = Astro.props;
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
 ---
 
 <!doctype html>
-<html lang="en">
+<html class="scroll-smooth bg-oxford-navy text-pale-stale" lang="es" data-locale="es">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="author" content="Enrique Gamboa Hernández" />
+		<meta name="description" content={description} data-meta-description />
+		<meta name="theme-color" content="#052f5f" />
+		<meta name="color-scheme" content="dark" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} data-meta-title />
+		<meta property="og:description" content={description} data-meta-og-description />
+		<meta property="og:locale" content="es_MX" data-meta-locale />
+		{canonical && <link rel="canonical" href={canonical} />}
+		<title data-document-title>{title}</title>
 	</head>
-	<body>
+	<body class="min-w-[320px] overflow-x-hidden bg-oxford-navy font-body text-base leading-6 text-pale-stale selection:bg-pale-stale selection:text-oxford-navy print:bg-white print:text-evergreen">
+		<a class="sr-only fixed left-3 top-3 z-[100] border border-pale-stale bg-oxford-navy px-3 py-2 font-mono text-xs text-pale-stale focus:not-sr-only focus:outline-2 focus:outline-offset-4 focus:outline-pale-stale" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+		<div class="pointer-events-none fixed inset-0 z-[100] grid place-items-center bg-oxford-navy px-6 text-pale-stale motion-reduce:opacity-0 data-[js=false]:animate-fade-out data-[js=false]:animate-delay-1000 data-[js=false]:animate-fill-mode-forwards print:hidden" data-loader data-js="false" role="status" aria-live="polite" aria-label="Cargando portafolio">
+			<div class="w-full max-w-[720px]" data-loader-content>
+				<div class="mb-12 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.12em] text-pale-stale/75">
+					<span data-loader-eyebrow>PORTFOLIO / INICIO</span>
+					<span data-loader-progress>0%</span>
+				</div>
+				<div class="overflow-hidden">
+					<p class="font-display text-[clamp(2.3rem,8vw,6.5rem)] font-medium leading-[0.9] tracking-[-0.09em]" data-loader-name>Enrique Gamboa Hernández</p>
+				</div>
+				<div class="mt-3 overflow-hidden">
+					<p class="font-display text-[clamp(1.2rem,3vw,2.2rem)] italic leading-none tracking-[-0.06em] text-pale-stale/75" data-loader-role>Ingeniero de Software</p>
+				</div>
+				<div class="mt-12 h-px w-full origin-left scale-x-0 bg-yale-blue" data-loader-progress-bar></div>
+				<div class="mt-4 flex items-center justify-between gap-5 font-mono text-[9px] uppercase tracking-[0.1em] text-pale-stale/70">
+					<span data-loader-status>Preparando la experiencia</span>
+					<span>MX / 2026</span>
+				</div>
+			</div>
+		</div>
 		<slot />
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

@@ -1,11 +1,60 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Education from '../components/Education.astro';
+import Experience from '../components/Experience.astro';
+import Hero from '../components/Hero.astro';
+import Projects from '../components/Projects.astro';
+import Resume from '../components/Resume.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import Stack from '../components/Stack.astro';
 import Layout from '../layouts/Layout.astro';
+import { content } from '../data/content';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const copy = content.es;
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Person',
+	name: 'Enrique Gamboa Hernández',
+	jobTitle: 'Software Engineer / Full-Stack Developer',
+	description: copy.meta.description,
+	url: Astro.site?.toString(),
+	address: {
+		'@type': 'PostalAddress',
+		addressCountry: 'MX',
+	},
+	knowsAbout: ['Frontend development', 'Full-stack development', 'Software architecture', 'Computer vision'],
+	sameAs: [
+		'https://www.linkedin.com/in/enrique-gamboa-hernandez/',
+		'https://github.com/engaherr',
+	],
+};
 ---
 
 <Layout>
-	<Welcome />
+	<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)}></script>
+	<div class="pointer-events-none fixed -right-48 top-[18%] -z-10 size-[30rem] rounded-full border border-yale-blue/25 shadow-[0_0_0_5rem_rgba(0,83,119,0.06),0_0_0_10rem_rgba(0,83,119,0.04)]" aria-hidden="true"></div>
+	<SiteHeader />
+	<main id="main-content">
+		<Hero />
+		<About />
+		<Experience />
+		<Projects />
+		<Stack />
+		<Education />
+		<Resume />
+		<Contact />
+	</main>
+	<footer class="border-t border-pale-stale/15 py-6 text-[9px] uppercase tracking-[0.05em] text-pale-stale/40 print:hidden" data-no-print>
+		<div class="mx-auto flex w-[calc(100%-30px)] flex-col items-start justify-between gap-4 font-mono sm:w-[calc(100%-36px)] sm:flex-row sm:items-center lg:w-[calc(100%-48px)]">
+			<span data-i18n="footer.built">{copy.footer.built}</span>
+			<a href="#top" data-i18n="footer.back">Volver arriba</a>
+		</div>
+	</footer>
 </Layout>
+
+<script>
+	import { initApp } from '../scripts/app';
+
+	initApp();
+</script>

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@import "tailwind-animations";
+
+@source "./src";
+
+@theme {
+	--color-oxford-navy: #052f5f;
+	--color-yale-blue: #005377;
+	--color-pale-stale: #d0ccd0;
+	--color-evergreen: #152614;
+	--color-dark-spruce: #1e441e;
+	--font-display: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+	--font-body: "Segoe UI", "Helvetica Neue", sans-serif;
+	--font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}

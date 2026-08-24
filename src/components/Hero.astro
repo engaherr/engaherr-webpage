@@ -1,0 +1,96 @@
+---
+import { content } from '../data/content';
+
+const copy = content.es;
+---
+
+<section class="relative isolate min-h-svh overflow-hidden border-b border-pale-stale/15 pb-7 pt-[105px] before:pointer-events-none before:fixed before:inset-0 before:-z-10 before:bg-[linear-gradient(rgba(208,204,208,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(208,204,208,0.025)_1px,transparent_1px)] before:bg-[size:80px_80px] md:pb-12 md:pt-[156px] print:hidden" id="top">
+	<div class="mx-auto grid min-h-0 w-[calc(100%-30px)] max-w-[1240px] items-center gap-12 sm:w-[calc(100%-36px)] md:min-h-[calc(100svh-204px)] md:grid-cols-[minmax(0,1.08fr)_minmax(330px,0.8fr)] lg:w-[calc(100%-48px)] lg:grid-cols-[minmax(0,1.08fr)_minmax(380px,0.92fr)] lg:gap-[8vw]">
+		<div class="max-w-[720px]">
+			<div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.11em] text-pale-stale motion-safe:animate-fade-in-down motion-safe:animate-duration-slow">
+				<span class="text-pale-stale">00</span>
+				<span class="h-px w-8 bg-current"></span>
+				<span data-i18n="hero.eyebrow">{copy.hero.eyebrow}</span>
+			</div>
+
+			<h1 class="mt-5 max-w-[760px] font-display text-[clamp(3rem,15vw,5.4rem)] font-medium leading-[0.95] tracking-[-0.09em] text-pale-stale sm:text-[clamp(3.7rem,8vw,8.2rem)] sm:leading-[0.92]">
+				<span class="block overflow-hidden"><span class="inline-block" data-i18n="hero.titleLine1">{copy.hero.titleLine1}</span></span>
+				<span class="block overflow-hidden italic font-normal text-pale-stale decoration-yale-blue decoration-4 underline-offset-8"><span class="inline-block" data-i18n="hero.titleLine2">{copy.hero.titleLine2}</span></span>
+			</h1>
+
+			<p class="mt-6 max-w-[470px] text-[clamp(1rem,1.5vw,1.17rem)] tracking-[-0.02em] text-pale-stale/75 sm:mt-8" data-i18n="hero.description">{copy.hero.description}</p>
+
+			<div class="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-7">
+				<a class="group inline-flex min-h-12 items-center justify-center gap-5 bg-yale-blue px-5 py-3 font-mono text-[11px] uppercase tracking-[0.04em] text-pale-stale shadow-lg shadow-yale-blue/20 transition-all duration-200 hover:bg-pale-stale hover:text-evergreen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale motion-safe:animate-fade-in-up motion-safe:animate-delay-300" href="#projects">
+					<span data-i18n="hero.primary">{copy.hero.primary}</span>
+					<span class="text-lg leading-none transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+				</a>
+				<a class="group inline-flex flex-col items-start gap-1.5 font-mono text-[11px] uppercase tracking-[0.04em] text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href="#cv">
+					<span data-i18n="hero.secondary">{copy.hero.secondary}</span>
+					<span class="h-px w-full origin-left bg-yale-blue transition-transform duration-200 group-hover:scale-x-40"></span>
+				</a>
+			</div>
+
+			<div class="mt-11 flex flex-wrap items-center gap-2.5 font-mono text-[10px] uppercase tracking-[0.045em] text-pale-stale/75 sm:mt-[72px]">
+				<span class="size-2 rounded-full bg-yale-blue shadow-[0_0_0_5px_rgba(0,83,119,0.15),0_0_14px_rgba(0,83,119,0.8)]" aria-hidden="true"></span>
+				<span data-i18n="hero.status">{copy.hero.status}</span>
+				<span class="text-pale-stale/30" aria-hidden="true">/</span>
+				<span data-i18n="hero.location">{copy.hero.location}</span>
+			</div>
+		</div>
+
+		<div class="relative mx-auto aspect-square w-full max-w-[530px] overflow-hidden border border-pale-stale/15 bg-oxford-navy bg-[radial-gradient(circle_at_center,rgba(0,83,119,0.36),transparent_38%),linear-gradient(135deg,rgba(0,83,119,0.2),transparent_32%)] motion-safe:animate-zoom-in motion-safe:animate-duration-slower" aria-label={copy.hero.mapLabel} data-i18n-attr="aria-label:hero.mapLabel" role="img">
+			<div class="pointer-events-none absolute inset-3 border border-pale-stale/10 sm:inset-4"></div>
+			<div class="absolute inset-x-5 top-5 z-10 flex items-center justify-between font-mono text-[9px] uppercase tracking-[0.1em] text-pale-stale/75 sm:inset-x-7 sm:top-7">
+				<span class="text-pale-stale" data-i18n="hero.mapLabel">{copy.hero.mapLabel}</span>
+				<span>SYS_01</span>
+			</div>
+
+			<div class="absolute inset-x-4 top-1/2 h-px bg-pale-stale/15 shadow-[0_-130px_0_rgba(208,204,208,0.05),0_130px_0_rgba(208,204,208,0.05)] sm:inset-x-7"></div>
+			<svg class="absolute inset-[9%] size-[82%] overflow-visible" viewBox="0 0 520 520" aria-hidden="true">
+				<circle cx="260" cy="260" r="164" class="fill-none stroke-yale-blue/45 [stroke-dasharray:2_8]" />
+				<circle cx="260" cy="260" r="104" class="fill-none stroke-pale-stale/25 [stroke-dasharray:1_5]" />
+				<path d="M260 260L91 135M260 260L435 136M260 260L428 388M260 260L89 391" class="fill-none stroke-yale-blue/75 [stroke-dasharray:4_7]" />
+				<path d="M91 135L435 136L428 388L89 391L91 135" class="fill-none stroke-pale-stale/15 [stroke-dasharray:1_8]" />
+			</svg>
+
+			<div class="absolute left-1/2 top-1/2 grid size-[105px] -translate-x-1/2 -translate-y-1/2 place-items-center content-center rounded-full border border-pale-stale bg-oxford-navy text-pale-stale shadow-[0_0_0_14px_rgba(0,83,119,0.08),0_0_35px_rgba(0,83,119,0.45)]">
+				<span class="absolute inset-2 rounded-full border border-yale-blue/40"></span>
+				<strong class="font-mono text-[23px] tracking-[-0.12em]">EG</strong>
+				<span class="mt-1.5 font-mono text-[7px] tracking-[0.08em]">BUILD / SHIP</span>
+			</div>
+
+			<div class="absolute left-[14%] top-[24%] z-10 inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.05em] text-pale-stale sm:text-[10px]">
+				<span class="size-2 rounded-full border border-yale-blue bg-evergreen shadow-[0_0_0_5px_rgba(0,83,119,0.15)]"></span>
+				<span data-i18n="hero.mapFrontend">Frontend</span>
+			</div>
+			<div class="absolute right-[11%] top-[24%] z-10 inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.05em] text-pale-stale sm:text-[10px]">
+				<span class="size-2 rounded-full border border-yale-blue bg-evergreen shadow-[0_0_0_5px_rgba(0,83,119,0.15)]"></span>
+				<span data-i18n="hero.mapBackend">Backend</span>
+			</div>
+			<div class="absolute bottom-[24%] right-[9%] z-10 inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.05em] text-pale-stale sm:text-[10px]">
+				<span class="size-2 rounded-full border border-yale-blue bg-evergreen shadow-[0_0_0_5px_rgba(0,83,119,0.15)]"></span>
+				<span data-i18n="hero.mapSystems">Systems</span>
+			</div>
+			<div class="absolute bottom-[24%] left-[14%] z-10 inline-flex items-center gap-2 font-mono text-[8px] uppercase tracking-[0.05em] text-pale-stale sm:text-[10px]">
+				<span class="size-2 rounded-full border border-yale-blue bg-evergreen shadow-[0_0_0_5px_rgba(0,83,119,0.15)]"></span>
+				<span data-i18n="hero.mapImpact">Impact</span>
+			</div>
+
+			<div class="absolute inset-x-5 bottom-5 z-10 flex items-center justify-between font-mono text-[8px] uppercase tracking-[0.1em] text-pale-stale/70 sm:inset-x-7 sm:bottom-7">
+				<span>LAT 19.54</span>
+				<span class="hidden sm:inline">LONG -96.91</span>
+				<span>READY</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="mx-auto mt-12 grid w-[calc(100%-30px)] max-w-[1240px] grid-cols-[1fr_auto] items-end gap-5 font-mono text-[9px] uppercase tracking-[0.1em] text-pale-stale/70 sm:w-[calc(100%-36px)] md:mt-9 md:grid-cols-[1fr_auto_1fr] lg:w-[calc(100%-48px)]">
+		<span class="hidden sm:block">SCROLL / 01 - 07</span>
+		<a class="group inline-flex items-center gap-3 text-pale-stale/75 transition-colors duration-200 hover:text-pale-stale" href="#about">
+			<span class="h-px w-7 bg-current transition-transform duration-200 group-hover:w-10"></span>
+			<span data-i18n="hero.scroll">Explora el recorrido</span>
+		</a>
+		<span class="hidden text-right md:block">MX - 2026</span>
+	</div>
+</section>

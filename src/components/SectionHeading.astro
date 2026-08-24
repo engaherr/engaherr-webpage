@@ -1,0 +1,21 @@
+---
+interface Props {
+	eyebrow: string;
+	title: string;
+	intro?: string;
+	section: string;
+	index: string;
+}
+
+const { eyebrow, title, intro, section, index } = Astro.props;
+---
+
+<div class="self-start md:sticky md:top-32">
+	<div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.11em] text-pale-stale">
+		<span class="text-pale-stale">{index}</span>
+		<span class="h-px w-8 bg-current"></span>
+		<span data-i18n={`${section}.eyebrow`}>{eyebrow}</span>
+	</div>
+	<h2 class="mt-6 max-w-[500px] font-display text-[clamp(2.3rem,12vw,4.1rem)] font-medium leading-[0.98] tracking-[-0.075em] text-pale-stale sm:text-[clamp(2.25rem,4vw,4.65rem)]" data-i18n={`${section}.title`}>{title}</h2>
+	{intro && <p class="mt-5 max-w-[500px] text-[15px] text-pale-stale/80 md:mt-7 md:max-w-[340px]" data-i18n={`${section}.intro`}>{intro}</p>}
+</div>

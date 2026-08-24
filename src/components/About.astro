@@ -1,0 +1,39 @@
+---
+import { content } from '../data/content';
+import SectionHeading from './SectionHeading.astro';
+
+const copy = content.es;
+---
+
+<section class="border-b border-pale-stale/15 py-24 sm:py-32 lg:py-48 print:hidden" id="about">
+	<div class="mx-auto w-[calc(100%-30px)] max-w-[1240px] sm:w-[calc(100%-36px)] lg:grid lg:w-[calc(100%-48px)] lg:grid-cols-[minmax(220px,0.68fr)_minmax(0,1.32fr)] lg:gap-[8vw]">
+		<SectionHeading
+			eyebrow={copy.about.eyebrow}
+			title={copy.about.title}
+			section="about"
+			index="01"
+		/>
+
+		<div class="mt-12 grid gap-11 lg:mt-0">
+			<div class="grid max-w-[650px] gap-5 text-base tracking-[-0.02em] text-pale-stale/75 sm:text-lg">
+				<p class="font-display text-[clamp(1.5rem,2.5vw,2.3rem)] leading-[1.12] tracking-[-0.05em] text-pale-stale" data-i18n="about.paragraph1">{copy.about.paragraph1}</p>
+				<p data-i18n="about.paragraph2">{copy.about.paragraph2}</p>
+			</div>
+
+			<aside class="relative max-w-[535px] border-l border-yale-blue bg-gradient-to-r from-yale-blue/20 to-transparent px-5 py-6 sm:px-7">
+				<span class="font-mono text-[9px] uppercase tracking-[0.12em] text-pale-stale" data-i18n="about.focusLabel">{copy.about.focusLabel}</span>
+				<p class="mt-4 max-w-[420px] text-lg tracking-[-0.03em] text-pale-stale sm:text-xl" data-i18n="about.focus">{copy.about.focus}</p>
+				<span class="absolute bottom-5 right-6 text-xl text-pale-stale" aria-hidden="true">↗</span>
+			</aside>
+
+			<div class="grid gap-3 sm:grid-cols-3">
+				{copy.about.stats.map((stat, index) => (
+					<div class="min-h-0 border-t border-pale-stale/35 bg-pale-stale/[0.02] p-5 sm:min-h-[166px]">
+						<span class="block font-display text-[clamp(2.2rem,4vw,4rem)] font-medium leading-none tracking-[-0.1em] text-pale-stale" data-i18n={`about.stats.${index}.value`}>{stat.value}</span>
+						<span class="mt-4 block max-w-[150px] font-mono text-[10px] leading-[1.45] text-pale-stale/75 sm:mt-[34px]" data-i18n={`about.stats.${index}.label`}>{stat.label}</span>
+					</div>
+				))}
+			</div>
+		</div>
+	</div>
+</section>

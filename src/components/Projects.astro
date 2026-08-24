@@ -1,0 +1,70 @@
+---
+import { content } from '../data/content';
+import SectionHeading from './SectionHeading.astro';
+
+const copy = content.es;
+const visualColors = ['bg-dark-spruce', 'bg-oxford-navy', 'bg-yale-blue', 'bg-evergreen', 'bg-dark-spruce'];
+const visualRotations = ['rotate-[-5deg]', 'rotate-[4deg]', 'rotate-[-2deg]', 'rotate-[3deg]', 'rotate-[-3deg]'];
+const animationDelays = ['animate-delay-0', 'animate-delay-100', 'animate-delay-200', 'animate-delay-300', 'animate-delay-400'];
+---
+
+<section class="border-b border-pale-stale/15 py-24 sm:py-32 lg:py-48 print:hidden" id="projects">
+	<div class="mx-auto w-[calc(100%-30px)] max-w-[1240px] sm:w-[calc(100%-36px)] lg:grid lg:w-[calc(100%-48px)] lg:grid-cols-[minmax(220px,0.68fr)_minmax(0,1.32fr)] lg:gap-[8vw]">
+		<SectionHeading
+			eyebrow={copy.projects.eyebrow}
+			title={copy.projects.title}
+			intro={copy.projects.intro}
+			section="projects"
+			index="03"
+		/>
+
+		<div class="mt-12 min-w-0 lg:mt-0">
+			<div class="grid gap-4 md:grid-cols-2">
+				{copy.projects.items.map((project, index) => (
+					<article class={`group flex w-full flex-col overflow-hidden border border-pale-stale/20 bg-pale-stale text-evergreen motion-safe:animate-fade-in-up motion-safe:animate-duration-slow ${animationDelays[index]} ${index === 0 ? 'md:col-span-2 md:grid md:grid-cols-[minmax(240px,0.8fr)_minmax(320px,1.2fr)]' : ''}`}>
+						<div class={`relative min-h-[220px] overflow-hidden ${visualColors[index]} ${index === 0 ? 'md:min-h-[430px]' : ''}`} aria-hidden="true">
+							<div class="absolute inset-x-5 top-5 flex justify-between font-mono text-[8px] uppercase tracking-[0.1em] text-pale-stale/70">
+								<span>CASE_{project.number}</span>
+								<span>{index < 2 ? 'HEALTH / SYSTEMS' : index === 2 ? 'API / UI' : index === 3 ? 'AUTH / DATA' : 'CLIENT / SERVER'}</span>
+							</div>
+							<div class="absolute inset-0 bg-[linear-gradient(rgba(208,204,208,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(208,204,208,0.09)_1px,transparent_1px)] bg-[size:34px_34px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]"></div>
+							<div class={`absolute left-1/2 top-1/2 grid h-[48%] w-[72%] -translate-x-1/2 -translate-y-1/2 ${visualRotations[index]} grid-cols-3 content-start gap-1.5 border border-pale-stale/50 bg-evergreen/80 p-4 shadow-[17px_17px_0_rgba(5,47,95,0.3),0_18px_55px_rgba(5,47,95,0.3)] backdrop-blur-sm transition-transform duration-500 group-hover:rotate-0 group-hover:scale-[1.03]`}>
+								<span class="size-1.5 rounded-full bg-yale-blue"></span>
+								<span class="size-1.5 rounded-full bg-pale-stale"></span>
+								<span class="size-1.5 rounded-full bg-oxford-navy"></span>
+								<div class="col-span-3 mt-6 grid gap-3">
+									<i class="block h-1.5 w-[78%] bg-pale-stale/20"></i>
+									<i class="block h-1.5 w-[54%] bg-yale-blue"></i>
+									<i class="block h-1.5 w-[88%] bg-pale-stale/20"></i>
+									<i class="block h-1.5 w-[38%] bg-pale-stale"></i>
+								</div>
+							</div>
+							<strong class="absolute bottom-3 right-5 font-display text-[clamp(5rem,12vw,10rem)] font-medium leading-[0.8] tracking-[-0.16em] text-pale-stale/25">{project.number}</strong>
+						</div>
+
+						<div class="flex min-h-[350px] flex-col items-start p-6 sm:p-10 md:p-12">
+							<div class="flex w-full items-center justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.04em] text-evergreen/75">
+								<span class="text-oxford-navy">{project.number}</span>
+								<span data-i18n={`projects.items.${index}.period`}>{project.period}</span>
+							</div>
+							<span class="mt-10 font-mono text-[10px] uppercase tracking-[0.07em] text-oxford-navy md:mt-14" data-i18n={`projects.items.${index}.category`}>{project.category}</span>
+							<h3 class="mt-3 font-display text-[clamp(2.6rem,11vw,5.4rem)] font-medium leading-[0.9] tracking-[-0.09em] text-evergreen sm:text-[clamp(2.6rem,5vw,5.4rem)]" data-i18n={`projects.items.${index}.title`}>{project.title}</h3>
+							<p class="mt-6 max-w-[520px] text-sm leading-6 text-evergreen/75" data-i18n={`projects.items.${index}.description`}>{project.description}</p>
+							<div class="mt-6 flex max-w-[520px] items-start gap-2.5 text-[13px] font-semibold text-oxford-navy">
+								<span class="text-lg leading-none" aria-hidden="true">↗</span>
+								<span data-i18n={`projects.items.${index}.impact`}>{project.impact}</span>
+							</div>
+							<div class="mt-auto flex flex-wrap gap-1.5 pt-8">
+								{project.stack.map((tag) => <span class="inline-flex min-h-6 items-center border border-evergreen/20 px-2 py-1 font-mono text-[9px] tracking-[0.04em] text-evergreen/75">{tag}</span>)}
+							</div>
+							<a class="group/link mt-7 inline-flex flex-col items-start gap-1.5 font-mono text-[11px] uppercase tracking-[0.04em] text-oxford-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-oxford-navy" href={project.link} target={project.link.startsWith('http') ? '_blank' : undefined} rel={project.link.startsWith('http') ? 'noreferrer' : undefined}>
+								<span data-i18n={`projects.items.${index}.linkLabel`}>{project.linkLabel}</span>
+								<span class="h-px w-full bg-yale-blue transition-transform duration-200 group-hover/link:scale-x-40"></span>
+							</a>
+						</div>
+					</article>
+				))}
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,36 @@
+---
+import { content } from '../data/content';
+
+const copy = content.es;
+---
+
+<header class="fixed inset-x-0 top-0 z-30 border-b border-pale-stale/10 bg-oxford-navy/95 backdrop-blur-xl print:hidden" data-no-print data-site-header>
+	<div class="mx-auto flex h-[70px] w-[calc(100%-30px)] max-w-[1240px] items-center gap-5 lg:h-[78px] lg:w-[calc(100%-48px)]">
+		<a class="group flex min-w-max items-center gap-3 text-[13px] font-semibold tracking-[-0.02em]" href="#top" aria-label="Enrique Gamboa Hernández - inicio" data-i18n-attr="aria-label:a11y.home">
+			<span class="grid size-9 place-items-center border border-pale-stale text-[10px] tracking-[-0.08em] text-pale-stale transition-colors duration-200 group-hover:border-yale-blue group-hover:text-pale-stale" aria-hidden="true">EG</span>
+			<span class="hidden text-pale-stale sm:inline">Enrique Gamboa Hernández</span>
+		</a>
+
+		<nav class="absolute left-4 right-4 top-[70px] hidden flex-col gap-0 border border-pale-stale/15 bg-oxford-navy/95 px-5 py-2 text-[10px] uppercase tracking-[0.08em] text-pale-stale/75 shadow-2xl shadow-black/30 data-[open=true]:flex md:static md:ml-auto md:flex md:flex-row md:items-center md:gap-5 md:border-0 md:bg-transparent md:p-0 md:shadow-none" id="mobile-navigation" aria-label="Navegación principal" data-mobile-nav data-i18n-attr="aria-label:a11y.navigation">
+			<a class="border-b border-pale-stale/10 py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:border-0 md:py-2" href="#about" data-i18n="nav.about">{copy.nav.about}</a>
+			<a class="border-b border-pale-stale/10 py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:border-0 md:py-2" href="#experience" data-i18n="nav.experience">{copy.nav.experience}</a>
+			<a class="border-b border-pale-stale/10 py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:border-0 md:py-2" href="#projects" data-i18n="nav.projects">{copy.nav.projects}</a>
+			<a class="border-b border-pale-stale/10 py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:border-0 md:py-2" href="#stack" data-i18n="nav.stack">{copy.nav.stack}</a>
+			<a class="border-b border-pale-stale/10 py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:border-0 md:py-2" href="#cv" data-i18n="nav.resume">{copy.nav.resume}</a>
+			<a class="py-3 transition-colors duration-200 hover:text-pale-stale focus-visible:text-pale-stale md:py-2" href="#contact" data-i18n="nav.contact">{copy.nav.contact}</a>
+		</nav>
+
+		<div class="ml-auto flex items-center gap-4">
+			<div class="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.08em] text-pale-stale/75" role="group" aria-label="Idioma" data-i18n-attr="aria-label:nav.language">
+				<button class="min-h-11 min-w-6 py-2 text-pale-stale transition-colors duration-200 hover:text-pale-stale aria-pressed:text-pale-stale" type="button" data-locale-toggle="es" aria-pressed="true">ES</button>
+				<span aria-hidden="true">/</span>
+				<button class="min-h-11 min-w-6 py-2 transition-colors duration-200 hover:text-pale-stale aria-pressed:text-pale-stale" type="button" data-locale-toggle="en" aria-pressed="false">EN</button>
+			</div>
+
+			<button class="grid size-11 place-items-center text-pale-stale md:hidden" type="button" aria-expanded="false" aria-controls="mobile-navigation" data-menu-toggle>
+				<span class="sr-only" data-i18n="nav.menu">{copy.nav.menu}</span>
+				<span class="grid gap-1.5" aria-hidden="true"><i class="block h-px w-6 bg-current"></i><i class="ml-auto block h-px w-4 bg-current"></i></span>
+			</button>
+		</div>
+	</div>
+</header>

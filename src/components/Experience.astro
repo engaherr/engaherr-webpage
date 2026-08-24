@@ -1,0 +1,51 @@
+---
+import { content } from '../data/content';
+import SectionHeading from './SectionHeading.astro';
+
+const copy = content.es;
+---
+
+<section class="border-b border-pale-stale/15 py-24 sm:py-32 lg:py-48 print:hidden" id="experience">
+	<div class="mx-auto w-[calc(100%-30px)] max-w-[1240px] sm:w-[calc(100%-36px)] lg:grid lg:w-[calc(100%-48px)] lg:grid-cols-[minmax(220px,0.68fr)_minmax(0,1.32fr)] lg:gap-[8vw]">
+		<SectionHeading
+			eyebrow={copy.experience.eyebrow}
+			title={copy.experience.title}
+			intro={copy.experience.intro}
+			section="experience"
+			index="02"
+		/>
+
+		<div class="relative mt-12 pl-9 md:pl-12 lg:mt-0">
+			<div class="absolute bottom-2 left-2 top-2 w-px bg-pale-stale/15 md:left-3.5" aria-hidden="true">
+				<span class="block h-full w-full origin-top bg-yale-blue shadow-[0_0_12px_rgba(0,83,119,0.8)]"></span>
+			</div>
+
+			{copy.experience.items.map((item, index) => (
+				<article class="group relative pb-16 last:pb-0">
+					<div class="absolute -left-9 top-0 grid size-6 place-items-center rounded-full border border-pale-stale/30 bg-evergreen text-[8px] text-pale-stale/80 transition-all duration-200 group-hover:border-yale-blue md:-left-12 md:size-7" aria-hidden="true">
+						<span>{String(index + 1).padStart(2, '0')}</span>
+					</div>
+					<div>
+						<div class="flex flex-col gap-1 font-mono text-[10px] uppercase tracking-[0.04em] text-pale-stale/75 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+							<time class="text-pale-stale" datetime={index === 0 ? '2025-10' : index === 1 ? '2025-08' : '2025-02'} data-i18n={`experience.items.${index}.period`}>
+								{item.period}
+							</time>
+							<span data-i18n={`experience.items.${index}.location`}>{item.location}</span>
+						</div>
+						<h3 class="mt-5 font-display text-[clamp(1.8rem,3vw,3.3rem)] font-medium leading-none tracking-[-0.07em] text-pale-stale" data-i18n={`experience.items.${index}.role`}>{item.role}</h3>
+						<p class="mt-2 text-sm text-pale-stale" data-i18n={`experience.items.${index}.company`}>{item.company}</p>
+						<p class="mt-5 max-w-[530px] text-base tracking-[-0.02em] text-pale-stale" data-i18n={`experience.items.${index}.summary`}>{item.summary}</p>
+						<ul class="mt-6 grid max-w-[610px] gap-3 text-[13px] leading-6 text-pale-stale/75 sm:text-sm">
+							{item.bullets.map((bullet, bulletIndex) => (
+								<li class="relative pl-5 before:absolute before:left-0 before:top-[0.75em] before:h-px before:w-1.5 before:bg-yale-blue" data-i18n={`experience.items.${index}.bullets.${bulletIndex}`}>{bullet}</li>
+							))}
+						</ul>
+						<div class="mt-6 flex flex-wrap gap-1.5" aria-label="Tecnologías utilizadas" data-i18n-attr="aria-label:a11y.technologies">
+							{item.tags.map((tag) => <span class="inline-flex min-h-6 items-center border border-pale-stale/20 px-2 py-1 font-mono text-[9px] tracking-[0.04em] text-pale-stale/70">{tag}</span>)}
+						</div>
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+</section>
