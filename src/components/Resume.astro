@@ -57,7 +57,7 @@ const copy = content.es;
 							</div>
 							<p class="mt-0.5 font-mono text-[10px] text-dark-spruce" data-i18n={`experience.items.${index}.company`}>{item.company}</p>
 							<ul class="mt-2 grid gap-1.5 list-disc pl-4 text-[11px] leading-4.5 text-evergreen/80">
-								{item.bullets.slice(0, 3).map((bullet, bulletIndex) => (
+								{item.bullets.slice(0, index === 0 ? 4 : 3).map((bullet, bulletIndex) => (
 									<li data-i18n={`experience.items.${index}.bullets.${bulletIndex}`}>{bullet}</li>
 								))}
 							</ul>
@@ -94,6 +94,8 @@ const copy = content.es;
 							<span data-i18n="education.school">{copy.education.school}</span>
 							<span data-i18n="education.period">{copy.education.period}</span>
 							<span data-i18n="education.gpa">{copy.education.gpa}</span>
+							<span data-i18n="education.courses">{copy.education.courses}</span>
+							<span data-i18n="education.research">{copy.education.research}</span>
 							<span data-i18n="education.english">{copy.education.english}</span>
 						</div>
 					</div>
