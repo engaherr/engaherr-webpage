@@ -3,9 +3,9 @@ import { content } from '../data/content';
 import SectionHeading from './SectionHeading.astro';
 
 const copy = content.es;
-const visualColors = ['bg-dark-spruce', 'bg-oxford-navy', 'bg-yale-blue', 'bg-evergreen', 'bg-dark-spruce'];
-const visualRotations = ['rotate-[-5deg]', 'rotate-[4deg]', 'rotate-[-2deg]', 'rotate-[3deg]', 'rotate-[-3deg]'];
-const animationDelays = ['animate-delay-0', 'animate-delay-100', 'animate-delay-200', 'animate-delay-300', 'animate-delay-400'];
+const visualColors = ['bg-dark-spruce', 'bg-oxford-navy', 'bg-yale-blue', 'bg-evergreen', 'bg-dark-spruce', 'bg-oxford-navy', 'bg-yale-blue'];
+const visualRotations = ['rotate-[-5deg]', 'rotate-[4deg]', 'rotate-[-2deg]', 'rotate-[3deg]', 'rotate-[-3deg]', 'rotate-[2deg]', 'rotate-[-4deg]'];
+const animationDelays = ['animate-delay-0', 'animate-delay-100', 'animate-delay-200', 'animate-delay-300', 'animate-delay-400', 'animate-delay-500', 'animate-delay-700'];
 ---
 
 <section class="border-b border-pale-stale/15 py-24 sm:py-32 lg:py-48 print:hidden" id="projects">
@@ -25,7 +25,7 @@ const animationDelays = ['animate-delay-0', 'animate-delay-100', 'animate-delay-
 						<div class={`relative min-h-[220px] overflow-hidden ${visualColors[index]} ${index === 0 ? 'md:min-h-[430px]' : ''}`} aria-hidden="true">
 							<div class="absolute inset-x-5 top-5 flex justify-between font-mono text-[8px] uppercase tracking-[0.1em] text-pale-stale/70">
 								<span>CASE_{project.number}</span>
-								<span>{index < 2 ? 'HEALTH / SYSTEMS' : index === 2 ? 'API / UI' : index === 3 ? 'AUTH / DATA' : 'CLIENT / SERVER'}</span>
+								<span>{index < 2 ? 'HEALTH / SYSTEMS' : index === 2 ? 'API / UI' : index === 3 ? 'AUTH / DATA' : index === 4 ? 'CLIENT / SERVER' : index === 5 ? 'DESKTOP / DATA' : 'TEAM / SDLC'}</span>
 							</div>
 							<div class="absolute inset-0 bg-[linear-gradient(rgba(208,204,208,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(208,204,208,0.09)_1px,transparent_1px)] bg-[size:34px_34px] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]"></div>
 							<div class={`absolute left-1/2 top-1/2 grid h-[48%] w-[72%] -translate-x-1/2 -translate-y-1/2 ${visualRotations[index]} grid-cols-3 content-start gap-1.5 border border-pale-stale/50 bg-evergreen/80 p-4 shadow-[17px_17px_0_rgba(5,47,95,0.3),0_18px_55px_rgba(5,47,95,0.3)] backdrop-blur-sm transition-transform duration-500 group-hover:rotate-0 group-hover:scale-[1.03]`}>
