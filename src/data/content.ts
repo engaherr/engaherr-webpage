@@ -30,7 +30,7 @@ export const content = {
 			status: 'Preparando la experiencia',
 		},
 		hero: {
-			eyebrow: 'Ingeniero de Software / Full-Stack',
+			eyebrow: 'Ingeniero de Software / Desarrollador Full-stack Junior',
 			titleLine1: 'Convierto complejidad',
 			titleLine2: 'en productos que avanzan.',
 			description:
@@ -78,16 +78,16 @@ export const content = {
 				'Tres entornos distintos, una misma forma de trabajar: escuchar el problema, hacer visible la complejidad y entregar una solución que resista el uso real.',
 			items: [
 				{
-					period: 'Oct 2025 - Actualidad',
+					period: 'Oct 2025 - Ago 2026',
 					company: 'Axioma Sanitas Fisioterapia',
 					role: 'Desarrollador Full-stack / Ingeniero de Software',
 					location: 'Xalapa, Veracruz / Freelance',
-					summary: 'Modernización de herramientas clínicas y reconstrucción de productos de escritorio.',
+					summary: 'Mantenimiento de Axioma App y modernización de herramientas clínicas y de escritorio.',
 					bullets: [
-						'Recuperé y estabilicé desde un instalador el código fuente de Podos, una aplicación de apoyo a un podoscopio.',
+						'Recuperé y estabilicé desde un instalador el código fuente de PODOS, una aplicación de apoyo a un podoscopio.',
 						'Migré la capa de datos de SQL Server a SQLite embebido, eliminando servicios externos y reduciendo el peso del instalador.',
 						'Desarrollé algoritmos de visión computacional y un renderizador vectorial con mapa de calor y lupa píxel a píxel, alcanzando hasta 70% de precisión en puntos clave.',
-						'Diseñé concurrencia aislada para interactuar con hardware médico sin bloquear la interfaz, y mantuve un sistema clínico con Laravel, Livewire y TailwindCSS.',
+						'Diseñé concurrencia aislada para interactuar con hardware médico sin bloquear la interfaz, y mantuve Axioma App con Laravel, Livewire y TailwindCSS.',
 					],
 					tags: ['.NET 8', 'WinForms', 'Laravel', 'Livewire', 'SQLite', 'Computer Vision'],
 				},
@@ -131,8 +131,8 @@ export const content = {
 				{
 					number: '01',
 					category: 'Healthcare / Desktop',
-					title: 'Podos',
-					period: 'Oct 2025 - Actualidad',
+					title: 'PODOS',
+					period: 'Oct 2025 - Ago 2026',
 					description:
 						'Herramienta de apoyo a un podoscopio reconstruida y modernizada para realizar análisis visual, diagnóstico preliminar y ajustes manuales sobre imágenes médicas.',
 					impact: 'Hasta 70% de precisión en puntos clave detectados',
@@ -143,8 +143,8 @@ export const content = {
 				{
 					number: '02',
 					category: 'Healthcare / Web application',
-					title: 'Clinical Records',
-					period: 'Oct 2025 - Actualidad',
+					title: 'Axioma App',
+					period: 'Oct 2025 - Ago 2026',
 					description:
 						'Sistema de gestión de pacientes e historias clínicas con formularios enriquecidos, guardado automático y componentes médicos interactivos.',
 					impact: 'Datos relacionales escalables e interfaces clínicas con estado',
@@ -188,6 +188,30 @@ export const content = {
 					link: 'https://github.com/engaherr/GuessWho',
 					linkLabel: 'Ver repositorio',
 				},
+				{
+					number: '06',
+					category: 'Desktop / Gestión de farmacia',
+					title: 'PharmaTech',
+					period: 'Feb 2023 - Jun 2023',
+					description:
+						'Sistema académico de gestión de farmacia construido como aplicación de escritorio para organizar operaciones y datos del dominio.',
+					impact: 'Aplicación desktop desarrollada con JavaFX y MySQL',
+					stack: ['Java', 'JavaFX', 'CSS', 'MySQL'],
+					link: 'https://github.com/engaherr/JFXFarmaciaIncremental',
+					linkLabel: 'Ver repositorio',
+				},
+				{
+					number: '07',
+					category: 'Investigación / Desktop',
+					title: 'Academic Research Management System',
+					period: 'Ago 2022 - Jun 2023',
+					description:
+						'Sistema de gestión de proyectos terminales académicos desarrollado durante un ciclo completo de desarrollo de software.',
+					impact: 'Liderazgo de equipo, control de versiones y resolución de conflictos complejos',
+					stack: ['Java', 'JavaFX', 'CSS', 'MySQL', 'Git'],
+					link: 'https://github.com/engaherr/SSPGER',
+					linkLabel: 'Ver repositorio',
+				},
 			],
 		},
 		stack: {
@@ -226,6 +250,8 @@ export const content = {
 			period: 'Enero 2026',
 			location: 'Xalapa, Veracruz, México',
 			gpa: 'Promedio 4.55 / 5.00',
+			courses: 'Cursos relevantes: Diseño de UI, Desarrollo Web, Sistemas de Redes, Pentesting, Pruebas de Software y Bases de Datos.',
+			research: 'Investigación: Revisión sistemática de literatura sobre evaluación de usabilidad de aplicaciones GenAI en contextos educativos.',
 			english: 'Inglés B2',
 			englishDetail: 'Intermedio alto',
 		},
@@ -286,7 +312,7 @@ export const content = {
 			status: 'Preparing the experience',
 		},
 		hero: {
-			eyebrow: 'Software Engineer / Full-Stack',
+			eyebrow: 'Software Engineer / Junior Full-stack Developer',
 			titleLine1: 'I turn complexity',
 			titleLine2: 'into products that move forward.',
 			description:
@@ -306,9 +332,9 @@ export const content = {
 			eyebrow: '01 / Profile',
 			title: 'From an ambiguous requirement to a solution people can use.',
 			paragraph1:
-				'I am a software engineer with experience building full-stack web products and specialized tools for academic, administrative and healthcare environments.',
+				'I am a software engineer with experience in full-stack web development across academic, administrative and healthcare environments.',
 			paragraph2:
-				'I move between architecture, interface and the details that make a product reliable: consistent data, clear states, useful documentation and an experience that stays out of the way.',
+				'I focus on requirements analysis, implementing technology solutions, process documentation and continuous improvement while collaborating with academic and administrative stakeholders and cross-functional teams.',
 			focusLabel: 'Current focus',
 			focus: 'Intentional interfaces, maintainable systems and technical decisions that can be explained.',
 			stats: [
@@ -333,16 +359,18 @@ export const content = {
 				'Three different environments, the same way of working: listen to the problem, make complexity visible and ship a solution that survives real use.',
 			items: [
 				{
-					period: 'Oct 2025 - Present',
-					company: 'Axioma Sanitas Fisioterapia',
-					role: 'Full-stack Developer / Software Engineer',
-					location: 'Xalapa, Veracruz / Freelance',
-					summary: 'Modernizing clinical tools and rebuilding desktop products.',
+					period: 'Oct 2025 - Aug 2026',
+					company: 'Axioma Sanitas Physiotherapy',
+					role: 'Full-stack Web Developer',
+					location: 'Xalapa, Veracruz, MX / Freelance',
+					summary: 'Maintaining Axioma App while rebuilding and modernizing the PODOS desktop tool.',
 					bullets: [
-						'Recovered and stabilized the source code of Podos from an installer, a support application for a podoscope.',
-						'Migrated the data layer from SQL Server to embedded SQLite, removing external services and reducing installer size.',
-						'Built computer vision algorithms and a vector renderer with heat maps and pixel-level magnification, reaching up to 70% accuracy in key points.',
-						'Designed isolated concurrency for medical hardware without blocking the UI, while maintaining a clinical system with Laravel, Livewire and TailwindCSS.',
+						'Spearheaded the maintenance and development of Axioma App, a patient and clinical history management system using Laravel, Livewire, Blade components and TailwindCSS, with Vite for optimized frontend builds.',
+						'Was primarily responsible for rich, stateful UIs with autosave, multi-tab layouts and interactive medical components such as anatomical maps and pain sliders.',
+						'Refactored legacy database schemas into scalable relational models and enforced data integrity through validation rules, database transactions and controller whitelisting.',
+						'PODOS: Recovered and stabilized the source code from its version 1.0.0 installer through reverse engineering.',
+						'PODOS: Migrated SQL Server to embedded SQLite and built computer-vision, vector-rendering and image-analysis features for the podoscope, reaching up to 70% accuracy in detected key points.',
+						'Designed isolated concurrency for medical hardware without blocking the UI and leveraged AI tools to manage technical debt, resolve deprecations and upgrade core dependencies.',
 					],
 					tags: ['.NET 8', 'WinForms', 'Laravel', 'Livewire', 'SQLite', 'Computer Vision'],
 				},
@@ -362,7 +390,7 @@ export const content = {
 				},
 				{
 					period: 'Feb 2025 - Jul 2025',
-					company: 'Faculty of Statistics and Informatics / UV',
+					company: 'Faculty of Statistics and Computer Science / UV',
 					role: 'PHP Web Developer',
 					location: 'Xalapa, Veracruz / Universidad Veracruzana',
 					summary: 'Institutional process automation focused on data, security and operational continuity.',
@@ -386,8 +414,8 @@ export const content = {
 				{
 					number: '01',
 					category: 'Healthcare / Desktop',
-					title: 'Podos',
-					period: 'Oct 2025 - Present',
+					title: 'PODOS',
+					period: 'Oct 2025 - Aug 2026',
 					description:
 						'Podoscope support tool rebuilt and modernized for visual analysis, preliminary assessment and manual adjustments on medical images.',
 					impact: 'Up to 70% accuracy in detected key points',
@@ -398,8 +426,8 @@ export const content = {
 				{
 					number: '02',
 					category: 'Healthcare / Web application',
-					title: 'Clinical Records',
-					period: 'Oct 2025 - Present',
+					title: 'Axioma App',
+					period: 'Oct 2025 - Aug 2026',
 					description:
 						'Patient and clinical records system with rich forms, autosave and interactive medical components.',
 					impact: 'Scalable relational data and stateful clinical interfaces',
@@ -434,13 +462,37 @@ export const content = {
 				{
 					number: '05',
 					category: 'Desktop / Distributed communication',
-					title: 'Guess Who Drawing',
+					title: 'Drawn Guess Who',
 					period: 'Aug 2023 - Dec 2023',
 					description:
 						'Digital version of a board game with a custom-designed graphical interface and client-server communication.',
 					impact: 'Concurrent operations delivered on a short timeline',
 					stack: ['.NET', 'WPF', 'WCF', 'C#', 'Testing'],
 					link: 'https://github.com/engaherr/GuessWho',
+					linkLabel: 'View repository',
+				},
+				{
+					number: '06',
+					category: 'Desktop / Pharmacy management',
+					title: 'PharmaTech',
+					period: 'Feb 2023 - Jun 2023',
+					description:
+						'Academic pharmacy management system built as a desktop application for organizing domain operations and data.',
+					impact: 'Desktop application built with JavaFX and MySQL',
+					stack: ['Java', 'JavaFX', 'CSS', 'MySQL'],
+					link: 'https://github.com/engaherr/JFXFarmaciaIncremental',
+					linkLabel: 'View repository',
+				},
+				{
+					number: '07',
+					category: 'Research / Desktop',
+					title: 'Academic Research Management System',
+					period: 'Aug 2022 - Jun 2023',
+					description:
+						'Academic terminal-project management system delivered through a complete Software Development Life Cycle.',
+					impact: 'Team leadership, version control and complex merge-conflict resolution',
+					stack: ['Java', 'JavaFX', 'CSS', 'MySQL', 'Git'],
+					link: 'https://github.com/engaherr/SSPGER',
 					linkLabel: 'View repository',
 				},
 			],
@@ -481,6 +533,8 @@ export const content = {
 			period: 'January 2026',
 			location: 'Xalapa, Veracruz, Mexico',
 			gpa: 'GPA 4.55 / 5.00',
+			courses: 'Relevant courses: UI Design, Web Development, Network Systems, Pentesting, Software Testing and Databases.',
+			research: 'Research: Systematic literature review on usability assessment of GenAI applications in educational contexts.',
 			english: 'English B2',
 			englishDetail: 'Upper-intermediate',
 		},
