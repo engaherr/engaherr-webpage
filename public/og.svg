@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#d0ccd0" stroke-opacity="0.05" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="#052f5f" />
+  <rect width="1200" height="630" fill="url(#grid)" />
+
+  <!-- decorative rings -->
+  <g fill="none" stroke="#005377" stroke-opacity="0.45">
+    <circle cx="1000" cy="315" r="230" stroke-dasharray="2 8" />
+    <circle cx="1000" cy="315" r="158" stroke="#d0ccd0" stroke-opacity="0.18" stroke-dasharray="1 6" />
+    <circle cx="1000" cy="315" r="96" stroke="#005377" stroke-opacity="0.6" />
+    <circle cx="1000" cy="315" r="70" fill="#052f5f" stroke="#d0ccd0" stroke-opacity="0.35" />
+    <circle cx="1000" cy="315" r="58" stroke="#005377" stroke-opacity="0.5" />
+  </g>
+  <text x="1000" y="308" text-anchor="middle" font-family="Avenir Next, Trebuchet MS, Segoe UI, sans-serif" font-size="30" font-weight="600" letter-spacing="-1" fill="#d0ccd0">EG</text>
+  <text x="1000" y="336" text-anchor="middle" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="11" letter-spacing="1.5" fill="#d0ccd0" fill-opacity="0.8">BUILD / SHIP</text>
+
+  <!-- top bar -->
+  <text x="72" y="86" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="19" letter-spacing="2.4" fill="#d0ccd0" fill-opacity="0.8">PORTFOLIO / SOFTWARE ENGINEER</text>
+  <text x="1128" y="86" text-anchor="end" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="19" letter-spacing="2.4" fill="#d0ccd0" fill-opacity="0.8">MX / 2026</text>
+  <path d="M72 112H1128" stroke="#d0ccd0" stroke-opacity="0.18" />
+
+  <!-- accent bar -->
+  <rect x="72" y="196" width="6" height="212" fill="#005377" />
+
+  <!-- name -->
+  <text x="112" y="284" font-family="Avenir Next, Trebuchet MS, Segoe UI, sans-serif" font-size="104" font-weight="500" letter-spacing="-5" fill="#d0ccd0">Enrique Gamboa</text>
+  <text x="112" y="386" font-family="Avenir Next, Trebuchet MS, Segoe UI, sans-serif" font-size="104" font-weight="400" font-style="italic" letter-spacing="-5" fill="#d0ccd0">Hernández</text>
+  <path d="M114 412H586" stroke="#005377" stroke-width="5" />
+
+  <!-- role -->
+  <text x="112" y="470" font-family="Avenir Next, Trebuchet MS, Segoe UI, sans-serif" font-size="36" font-weight="400" letter-spacing="-0.8" fill="#d0ccd0" fill-opacity="0.82">Ingeniero de Software / Desarrollador Full-Stack</text>
+
+  <!-- bottom bar -->
+  <path d="M72 528H1128" stroke="#d0ccd0" stroke-opacity="0.18" />
+  <text x="72" y="572" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="19" letter-spacing="1.8" fill="#d0ccd0" fill-opacity="0.8">XALAPA, VERACRUZ, MÉXICO</text>
+  <text x="600" y="572" text-anchor="middle" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="19" letter-spacing="1.8" fill="#d0ccd0" fill-opacity="0.8">github.com/engaherr</text>
+  <text x="1128" y="572" text-anchor="end" font-family="SFMono-Regular, Consolas, Liberation Mono, monospace" font-size="19" letter-spacing="1.8" fill="#d0ccd0" fill-opacity="0.8">engaherr-webpage.vercel.app</text>
+</svg>

@@ -9,6 +9,7 @@ interface Props {
 
 const { title = content.es.meta.title, description = content.es.meta.description } = Astro.props;
 const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefined;
+const ogImage = Astro.site ? new URL('/og.png', Astro.site) : undefined;
 ---
 
 <!doctype html>
@@ -27,6 +28,15 @@ const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site) : undefin
 		<meta property="og:title" content={title} data-meta-title />
 		<meta property="og:description" content={description} data-meta-og-description />
 		<meta property="og:locale" content="es_MX" data-meta-locale />
+		{canonical && <meta property="og:url" content={canonical} />}
+		{ogImage && <meta property="og:image" content={ogImage} />}
+		{ogImage && <meta property="og:image:width" content="1200" />}
+		{ogImage && <meta property="og:image:height" content="630" />}
+		{ogImage && <meta property="og:image:alt" content={title} data-meta-title />}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} data-meta-title />
+		<meta name="twitter:description" content={description} data-meta-og-description />
+		{ogImage && <meta name="twitter:image" content={ogImage} />}
 		{canonical && <link rel="canonical" href={canonical} />}
 		<title data-document-title>{title}</title>
 	</head>

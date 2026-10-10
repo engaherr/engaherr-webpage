@@ -1,0 +1,32 @@
+---
+import { content, personalInfo } from '../data/content';
+import Layout from '../layouts/Layout.astro';
+
+const copy = content.es;
+---
+
+<Layout title={`404 | ${personalInfo.name}`} description={copy.notFound.body}>
+	<main class="grid min-h-svh place-items-center px-6 py-24" id="main-content">
+		<div class="w-full max-w-[720px]">
+			<div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.11em] text-pale-stale">
+				<span data-i18n="notFound.code">{copy.notFound.code}</span>
+				<span class="h-px w-8 bg-current"></span>
+				<span>{personalInfo.name}</span>
+			</div>
+
+			<h1 class="mt-6 max-w-[620px] font-display text-[clamp(2.6rem,10vw,5.2rem)] font-medium leading-[0.98] tracking-[-0.08em] text-pale-stale" data-i18n="notFound.title">{copy.notFound.title}</h1>
+			<p class="mt-6 max-w-[520px] text-[clamp(1rem,1.5vw,1.17rem)] tracking-[-0.02em] text-pale-stale/75" data-i18n="notFound.body">{copy.notFound.body}</p>
+
+			<a class="group mt-9 inline-flex min-h-12 items-center gap-5 bg-yale-blue px-5 py-3 font-mono text-[11px] uppercase tracking-[0.04em] text-pale-stale shadow-lg shadow-yale-blue/20 transition-colors duration-200 hover:bg-pale-stale hover:text-evergreen focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href="/">
+				<span data-i18n="notFound.cta">{copy.notFound.cta}</span>
+				<span class="text-lg leading-none transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+			</a>
+		</div>
+	</main>
+</Layout>
+
+<script>
+	import { initApp } from '../scripts/app';
+
+	initApp();
+</script>

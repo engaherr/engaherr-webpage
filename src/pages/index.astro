@@ -9,25 +9,38 @@ import Resume from '../components/Resume.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import Stack from '../components/Stack.astro';
 import Layout from '../layouts/Layout.astro';
-import { content } from '../data/content';
+import { content, personalInfo } from '../data/content';
 
 const copy = content.es;
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Person',
-	name: 'Enrique Gamboa Hernández',
+	name: personalInfo.name,
 	jobTitle: 'Software Engineer / Full-Stack Developer',
 	description: copy.meta.description,
 	url: Astro.site?.toString(),
+	image: Astro.site ? new URL('/og.png', Astro.site).toString() : undefined,
+	email: personalInfo.email,
+	telephone: personalInfo.phone,
 	address: {
 		'@type': 'PostalAddress',
+		addressLocality: 'Xalapa',
+		addressRegion: 'Veracruz',
 		addressCountry: 'MX',
 	},
-	knowsAbout: ['Frontend development', 'Full-stack development', 'Software architecture', 'Computer vision'],
-	sameAs: [
-		'https://www.linkedin.com/in/enrique-gamboa-hernandez/',
-		'https://github.com/engaherr',
+	alumniOf: {
+		'@type': 'CollegeOrUniversity',
+		name: 'Universidad Veracruzana',
+	},
+	knowsAbout: [
+		'Frontend development',
+		'Full-stack development',
+		'Software architecture',
+		'Computer vision',
+		'Requirements analysis',
+		'Database normalization',
 	],
+	sameAs: [personalInfo.social.linkedin, personalInfo.social.github, personalInfo.social.timeline],
 };
 ---
 
