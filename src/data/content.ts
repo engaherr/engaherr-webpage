@@ -260,7 +260,7 @@ export const content = {
 		resume: {
 			eyebrow: '06 / CV',
 			title: 'Una vista clara de mi trayectoria.',
-			description:
+			intro:
 				'El CV completo vive en HTML para que sea accesible, fácil de leer y limpio al imprimir.',
 			print: 'Imprimir / guardar PDF',
 			documentLabel: 'Currículum profesional',
@@ -543,7 +543,7 @@ export const content = {
 		resume: {
 			eyebrow: '06 / Resume',
 			title: 'A clear view of my journey.',
-			description:
+			intro:
 				'The complete resume lives in HTML so it stays accessible, easy to read and clean when printed.',
 			print: 'Print / save PDF',
 			documentLabel: 'Professional resume',
