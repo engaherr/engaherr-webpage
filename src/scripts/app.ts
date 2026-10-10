@@ -61,10 +61,10 @@ function updateLocale(locale: Locale, persist = true) {
 
 	const strings = content[locale];
 	document.title = strings.meta.title;
-	document.querySelector('[data-meta-description]')?.setAttribute('content', strings.meta.description);
-	document.querySelector('[data-meta-title]')?.setAttribute('content', strings.meta.title);
-	document.querySelector('[data-meta-og-description]')?.setAttribute('content', strings.meta.description);
-	document.querySelector('[data-meta-locale]')?.setAttribute('content', locale === 'es' ? 'es_MX' : 'en_US');
+	document.querySelectorAll('[data-meta-description]').forEach((element) => element.setAttribute('content', strings.meta.description));
+	document.querySelectorAll('[data-meta-title]').forEach((element) => element.setAttribute('content', strings.meta.title));
+	document.querySelectorAll('[data-meta-og-description]').forEach((element) => element.setAttribute('content', strings.meta.description));
+	document.querySelectorAll('[data-meta-locale]').forEach((element) => element.setAttribute('content', locale === 'es' ? 'es_MX' : 'en_US'));
 
 	if (persist) {
 		try {
