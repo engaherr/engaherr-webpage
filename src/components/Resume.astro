@@ -1,5 +1,5 @@
 ---
-import { content } from '../data/content';
+import { content, personalInfo } from '../data/content';
 import SectionHeading from './SectionHeading.astro';
 
 const copy = content.es;
@@ -34,17 +34,18 @@ const copy = content.es;
 						<p class="mt-2.5 text-sm text-evergreen/70" data-i18n="hero.eyebrow">{copy.hero.eyebrow}</p>
 					</div>
 					<div class="grid justify-items-start gap-1 font-mono text-[9px] leading-[1.45] text-evergreen/70 sm:justify-items-end sm:text-right">
-						<a class="hover:text-dark-spruce hover:underline" href="mailto:egamboa020903@gmail.com">egamboa020903@gmail.com</a>
-						<a class="hover:text-dark-spruce hover:underline" href="https://www.linkedin.com/in/enrique-gamboa-hernandez/" target="_blank" rel="noreferrer">linkedin.com/in/enrique-gamboa-hernandez</a>
-						<a class="hover:text-dark-spruce hover:underline" href="https://github.com/engaherr" target="_blank" rel="noreferrer">github.com/engaherr</a>
+						<a class="hover:text-dark-spruce hover:underline" href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
+						<a class="hover:text-dark-spruce hover:underline" href={personalInfo.phoneHref}><span data-i18n="contact.phoneLabel">{copy.contact.phoneLabel}</span>: {personalInfo.phone}</a>
+						<a class="hover:text-dark-spruce hover:underline" href={personalInfo.social.linkedin} target="_blank" rel="noreferrer">{personalInfo.social.linkedinLabel}</a>
+						<a class="hover:text-dark-spruce hover:underline" href={personalInfo.social.github} target="_blank" rel="noreferrer">{personalInfo.social.githubLabel}</a>
+						<a class="hover:text-dark-spruce hover:underline" href={personalInfo.social.timeline} target="_blank" rel="noreferrer"><span data-i18n="contact.timelineLabel">{copy.contact.timelineLabel}</span>: {personalInfo.social.timelineLabel}</a>
 						<span data-i18n="hero.location">{copy.hero.location}</span>
 					</div>
 				</header>
 
 				<section class="border-b border-evergreen/20 py-7">
 					<h4 class="mb-4 font-mono text-[9px] uppercase tracking-[0.1em] text-dark-spruce" data-i18n="resume.profileLabel">{copy.resume.profileLabel}</h4>
-					<p class="max-w-[720px] text-[13px] leading-5 text-evergreen/80" data-i18n="about.paragraph1">{copy.about.paragraph1}</p>
-					<p class="mt-2 max-w-[720px] text-[13px] leading-5 text-evergreen/80" data-i18n="about.paragraph2">{copy.about.paragraph2}</p>
+					<p class="max-w-[720px] text-[13px] leading-5 text-evergreen/80" data-i18n="about.summary">{copy.about.summary}</p>
 				</section>
 
 				<section class="border-b border-evergreen/20 py-7">
@@ -57,7 +58,7 @@ const copy = content.es;
 							</div>
 							<p class="mt-0.5 font-mono text-[10px] text-dark-spruce" data-i18n={`experience.items.${index}.company`}>{item.company}</p>
 							<ul class="mt-2 grid gap-1.5 list-disc pl-4 text-[11px] leading-4.5 text-evergreen/80">
-								{item.bullets.slice(0, index === 0 ? 4 : 3).map((bullet, bulletIndex) => (
+								{item.bullets.slice(0, 4).map((bullet, bulletIndex) => (
 									<li data-i18n={`experience.items.${index}.bullets.${bulletIndex}`}>{bullet}</li>
 								))}
 							</ul>

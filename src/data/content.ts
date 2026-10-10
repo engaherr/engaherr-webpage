@@ -1,5 +1,21 @@
 export type Locale = 'es' | 'en';
 
+export const personalInfo = {
+	name: 'Enrique Gamboa Hernández',
+	email: 'egamboa020903@gmail.com',
+	phone: '+52 228 213 3782',
+	phoneHref: 'tel:+522282133782',
+	location: 'Xalapa, Veracruz, México',
+	social: {
+		linkedin: 'https://www.linkedin.com/in/enrique-gamboa-hernandez/',
+		linkedinLabel: 'linkedin.com/in/enrique-gamboa-hernandez',
+		github: 'https://github.com/engaherr',
+		githubLabel: 'github.com/engaherr',
+		timeline: 'https://mnf.red/3a0185e8-b428-455b-9da8-71c22de19332/timeline',
+		timelineLabel: 'mnf.red/3a0185e8-b428-455b-9da8-71c22de19332/timeline',
+	},
+} as const;
+
 export const content = {
 	es: {
 		meta: {
@@ -30,7 +46,7 @@ export const content = {
 			status: 'Preparando la experiencia',
 		},
 		hero: {
-			eyebrow: 'Ingeniero de Software / Desarrollador Full-stack Junior',
+			eyebrow: 'Ingeniero de Software / Desarrollador Full-Stack',
 			titleLine1: 'Convierto complejidad',
 			titleLine2: 'en productos que avanzan.',
 			description:
@@ -53,6 +69,8 @@ export const content = {
 				'Soy un ingeniero de software con experiencia construyendo productos web full-stack y herramientas especializadas para entornos académicos, administrativos y de salud.',
 			paragraph2:
 				'Me muevo entre la arquitectura, la interfaz y los detalles que hacen que un producto sea confiable: datos consistentes, estados claros, documentación útil y una experiencia que no estorba.',
+			summary:
+				'Ingeniero de Software con experiencia práctica en desarrollo web full-stack en entornos institucionales, administrativos y del sector salud. Especializado en análisis de requerimientos, diseño de arquitecturas escalables, normalización de bases de datos y refactorización de sistemas legados. Con experiencia comprobada colaborando con equipos multidisciplinarios y dependencias gubernamentales e institucionales para optimizar el rendimiento, la seguridad y la usabilidad de aplicaciones críticas.',
 			focusLabel: 'Enfoque actual',
 			focus:
 				'Interfaces con intención, sistemas mantenibles y decisiones técnicas que se pueden explicar.',
@@ -75,12 +93,27 @@ export const content = {
 			eyebrow: '02 / Experiencia',
 			title: 'Construir bien también significa entender el contexto.',
 			intro:
-				'Tres entornos distintos, una misma forma de trabajar: escuchar el problema, hacer visible la complejidad y entregar una solución que resista el uso real.',
+				'Cuatro entornos distintos, una misma forma de trabajar: escuchar el problema, hacer visible la complejidad y entregar una solución que resista el uso real.',
 			items: [
 				{
+					datetime: '2026-08',
+					period: 'Ago 2026 - Presente',
+					company: 'Universidad Veracruzana (DGAE)',
+					role: 'Analista de Tecnología de Información',
+					location: 'Xalapa, Veracruz, México',
+					summary: 'Modernización del Sistema Institucional de Estadística y Analítica y procesamiento de datos para reportes a la federación.',
+					bullets: [
+						'Migración y refactorización integral de 4 módulos del Sistema Institucional de Estadística y Analítica desde CodeIgniter 3 a CodeIgniter 4, elevando los estándares de seguridad, rendimiento y usabilidad.',
+						'Diseño e implementación de un pipeline de importación y procesamiento por lotes para más de 80,000 registros, optimizando la generación y entrega de reportes hacia la federación.',
+						'Normalización estructural del modelo de base de datos relacional y migración controlada de los datos legados hacia el nuevo esquema estructurado.',
+					],
+					tags: ['PHP', 'CodeIgniter 4', 'CodeIgniter 3', 'MySQL', 'ETL'],
+				},
+				{
+					datetime: '2025-10',
 					period: 'Oct 2025 - Ago 2026',
 					company: 'Axioma Sanitas Fisioterapia',
-					role: 'Desarrollador Full-stack / Ingeniero de Software',
+					role: 'Ingeniero de Software / Desarrollador Full-Stack',
 					location: 'Xalapa, Veracruz / Freelance',
 					summary: 'Mantenimiento de Axioma App y modernización de herramientas clínicas y de escritorio.',
 					bullets: [
@@ -94,6 +127,7 @@ export const content = {
 					tags: ['.NET 8', 'WinForms', 'Laravel', 'Livewire', 'SQLite', 'Computer Vision'],
 				},
 				{
+					datetime: '2025-08',
 					period: 'Ago 2025 - Dic 2025',
 					company: 'Sophinauta Ltd / Plomb.ai',
 					role: 'Desarrollador Web Frontend',
@@ -108,6 +142,7 @@ export const content = {
 					tags: ['React', 'TypeScript', 'Elixir', 'PostgreSQL', 'Cypress', 'A/B Testing'],
 				},
 				{
+					datetime: '2025-02',
 					period: 'Feb 2025 - Jul 2025',
 					company: 'Facultad de Estadística e Informática / UV',
 					role: 'Desarrollador Web PHP',
@@ -223,24 +258,34 @@ export const content = {
 				'Mi stack cruza producto, frontend, backend y sistemas. La tecnología importa; el criterio con el que se usa importa más.',
 			groups: [
 				{
-					title: 'Interfaces',
-					description: 'Componentes, estados y experiencias que se sienten consistentes.',
-					items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'TailwindCSS', 'HTML5 / CSS3'],
+					title: 'Lenguajes',
+					description: 'El lenguaje según el dominio, la plataforma y el equipo.',
+					items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'Java', 'C#', 'C++', 'Elixir', 'HTML5 / CSS3'],
 				},
 				{
-					title: 'Servicios y datos',
+					title: 'Frameworks y UI',
+					description: 'Componentes, estados y experiencias que se sienten consistentes.',
+					items: ['React', 'Next.js', 'Livewire', 'TailwindCSS', 'Bootstrap'],
+				},
+				{
+					title: 'Backend y datos',
 					description: 'APIs y modelos de datos preparados para crecer con el producto.',
-					items: ['Node.js', 'Express', 'Laravel', 'PHP', 'RESTful', 'gRPC', 'SQL Server', 'MySQL', 'PostgreSQL'],
+					items: ['Node.js', 'Express', 'Laravel', 'CodeIgniter 3 / 4', 'RESTful', 'gRPC', 'MySQL', 'PostgreSQL', 'SQL Server', 'SQLite'],
 				},
 				{
 					title: 'Sistemas y calidad',
 					description: 'Desktop, pruebas y herramientas para entregar con confianza.',
-					items: ['.NET', 'WPF', 'WinForms', 'Java', 'Jest', 'Supertest', 'Cypress', 'Docker', 'SonarQube'],
+					items: ['.NET', 'WPF', 'WinForms', 'Linux', 'Docker', 'Git', 'Vite', 'Jest', 'Supertest', 'Cypress', 'ExUnit', 'SonarQube'],
 				},
 				{
-					title: 'Diseño y documentación',
+					title: 'Diseño y modelado',
 					description: 'Hacer visibles las decisiones antes de convertirlas en código.',
-					items: ['Figma', 'Pencil', 'Mermaid', 'draw.io', 'StarUML', 'Swagger'],
+					items: ['Figma', 'Pencil', 'Enterprise Architect', 'UML', 'Mermaid', 'StarUML', 'draw.io', 'Swagger'],
+				},
+				{
+					title: 'Idiomas',
+					description: 'Comunicación técnica clara en dos idiomas.',
+					items: ['Español (Nativo)', 'Inglés (B2 - Intermedio-Avanzado)'],
 				},
 			],
 		},
@@ -256,6 +301,8 @@ export const content = {
 			research: 'Investigación: Revisión sistemática de literatura sobre evaluación de usabilidad de aplicaciones GenAI en contextos educativos.',
 			english: 'Inglés B2',
 			englishDetail: 'Intermedio alto',
+			spanish: 'Español',
+			spanishDetail: 'Nativo',
 		},
 		resume: {
 			eyebrow: '06 / CV',
@@ -279,10 +326,18 @@ export const content = {
 			cta: 'Escríbeme',
 			availability: 'Disponible para oportunidades remotas y proyectos seleccionados.',
 			email: 'egamboa020903@gmail.com',
+			phoneLabel: 'Teléfono',
+			timelineLabel: 'Línea de tiempo',
 		},
 		footer: {
 			built: 'Diseñado y construido con Astro, TailwindCSS y GSAP.',
 			back: 'Volver arriba',
+		},
+		notFound: {
+			code: '404',
+			title: 'Esta página no existe.',
+			body: 'El enlace puede estar roto o la página cambió de lugar. Vuelve al inicio para seguir explorando el portafolio.',
+			cta: 'Volver al inicio',
 		},
 	},
 	en: {
@@ -314,7 +369,7 @@ export const content = {
 			status: 'Preparing the experience',
 		},
 		hero: {
-			eyebrow: 'Software Engineer / Junior Full-stack Developer',
+			eyebrow: 'Software Engineer / Full-Stack Developer',
 			titleLine1: 'I turn complexity',
 			titleLine2: 'into products that move forward.',
 			description:
@@ -337,6 +392,8 @@ export const content = {
 				'I am a software engineer with experience in full-stack web development across academic, administrative and healthcare environments.',
 			paragraph2:
 				'I focus on requirements analysis, implementing technology solutions, process documentation and continuous improvement while collaborating with academic and administrative stakeholders and cross-functional teams.',
+			summary:
+				'Software Engineer with hands-on experience in full-stack web development across institutional, administrative and healthcare environments. Specialized in requirements analysis, scalable architecture design, database normalization and legacy system refactoring. Proven track record collaborating with cross-functional teams and government and institutional agencies to optimize the performance, security and usability of critical applications.',
 			focusLabel: 'Current focus',
 			focus: 'Intentional interfaces, maintainable systems and technical decisions that can be explained.',
 			stats: [
@@ -358,12 +415,27 @@ export const content = {
 			eyebrow: '02 / Experience',
 			title: 'Building well also means understanding the context.',
 			intro:
-				'Three different environments, the same way of working: listen to the problem, make complexity visible and ship a solution that survives real use.',
+				'Four different environments, the same way of working: listen to the problem, make complexity visible and ship a solution that survives real use.',
 			items: [
 				{
+					datetime: '2026-08',
+					period: 'Aug 2026 - Present',
+					company: 'Universidad Veracruzana (DGAE)',
+					role: 'Information Technology Analyst',
+					location: 'Xalapa, Veracruz, Mexico',
+					summary: 'Modernizing the Institutional Statistics and Analytics System and processing data for federal reporting.',
+					bullets: [
+						'Migrated and refactored 4 modules of the Institutional Statistics and Analytics System from CodeIgniter 3 to CodeIgniter 4, raising security, performance and usability standards.',
+						'Designed and implemented a batch import and processing pipeline for more than 80,000 records, optimizing report generation and delivery to the federation.',
+						'Structurally normalized the relational database model and led a controlled migration of legacy data into the new structured schema.',
+					],
+					tags: ['PHP', 'CodeIgniter 4', 'CodeIgniter 3', 'MySQL', 'ETL'],
+				},
+				{
+					datetime: '2025-10',
 					period: 'Oct 2025 - Aug 2026',
 					company: 'Axioma Sanitas Physiotherapy',
-					role: 'Full-stack Web Developer',
+					role: 'Software Engineer / Full-Stack Developer',
 					location: 'Xalapa, Veracruz, MX / Freelance',
 					summary: 'Maintaining Axioma App while rebuilding and modernizing the PODOS desktop tool.',
 					bullets: [
@@ -377,6 +449,7 @@ export const content = {
 					tags: ['.NET 8', 'WinForms', 'Laravel', 'Livewire', 'SQLite', 'Computer Vision'],
 				},
 				{
+					datetime: '2025-08',
 					period: 'Aug 2025 - Dec 2025',
 					company: 'Sophinauta Ltd / Plomb.ai',
 					role: 'Frontend Web Developer',
@@ -391,6 +464,7 @@ export const content = {
 					tags: ['React', 'TypeScript', 'Elixir', 'PostgreSQL', 'Cypress', 'A/B Testing'],
 				},
 				{
+					datetime: '2025-02',
 					period: 'Feb 2025 - Jul 2025',
 					company: 'Faculty of Statistics and Computer Science / UV',
 					role: 'PHP Web Developer',
@@ -506,24 +580,34 @@ export const content = {
 				'My stack crosses product, frontend, backend and systems. The technology matters; the reasoning behind it matters more.',
 			groups: [
 				{
-					title: 'Interfaces',
-					description: 'Components, states and experiences that feel consistent.',
-					items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'TailwindCSS', 'HTML5 / CSS3'],
+					title: 'Programming languages',
+					description: 'The right language for the domain, the platform and the team.',
+					items: ['JavaScript', 'TypeScript', 'PHP', 'Python', 'Java', 'C#', 'C++', 'Elixir', 'HTML5 / CSS3'],
 				},
 				{
-					title: 'Services and data',
+					title: 'Frameworks and UI',
+					description: 'Components, states and experiences that feel consistent.',
+					items: ['React', 'Next.js', 'Livewire', 'TailwindCSS', 'Bootstrap'],
+				},
+				{
+					title: 'Backend and data',
 					description: 'APIs and data models prepared to grow with the product.',
-					items: ['Node.js', 'Express', 'Laravel', 'PHP', 'RESTful', 'gRPC', 'SQL Server', 'MySQL', 'PostgreSQL'],
+					items: ['Node.js', 'Express', 'Laravel', 'CodeIgniter 3 / 4', 'RESTful', 'gRPC', 'MySQL', 'PostgreSQL', 'SQL Server', 'SQLite'],
 				},
 				{
 					title: 'Systems and quality',
 					description: 'Desktop, testing and tools for shipping with confidence.',
-					items: ['.NET', 'WPF', 'WinForms', 'Java', 'Jest', 'Supertest', 'Cypress', 'Docker', 'SonarQube'],
+					items: ['.NET', 'WPF', 'WinForms', 'Linux', 'Docker', 'Git', 'Vite', 'Jest', 'Supertest', 'Cypress', 'ExUnit', 'SonarQube'],
 				},
 				{
-					title: 'Design and documentation',
+					title: 'Design and modeling',
 					description: 'Making decisions visible before turning them into code.',
-					items: ['Figma', 'Pencil', 'Mermaid', 'draw.io', 'StarUML', 'Swagger'],
+					items: ['Figma', 'Pencil', 'Enterprise Architect', 'UML', 'Mermaid', 'StarUML', 'draw.io', 'Swagger'],
+				},
+				{
+					title: 'Languages',
+					description: 'Clear technical communication in two languages.',
+					items: ['Spanish (Native)', 'English (B2 - Upper-intermediate)'],
 				},
 			],
 		},
@@ -539,6 +623,8 @@ export const content = {
 			research: 'Research: Systematic literature review on usability assessment of GenAI applications in educational contexts.',
 			english: 'English B2',
 			englishDetail: 'Upper-intermediate',
+			spanish: 'Spanish',
+			spanishDetail: 'Native',
 		},
 		resume: {
 			eyebrow: '06 / Resume',
@@ -562,10 +648,18 @@ export const content = {
 			cta: 'Start a conversation',
 			availability: 'Available for remote opportunities and selected projects.',
 			email: 'egamboa020903@gmail.com',
+			phoneLabel: 'Phone',
+			timelineLabel: 'Timeline',
 		},
 		footer: {
 			built: 'Designed and built with Astro, TailwindCSS and GSAP.',
 			back: 'Back to top',
+		},
+		notFound: {
+			code: '404',
+			title: 'This page does not exist.',
+			body: 'The link may be broken or the page moved somewhere else. Head back home to keep exploring the portfolio.',
+			cta: 'Back to home',
 		},
 	},
 } as const;

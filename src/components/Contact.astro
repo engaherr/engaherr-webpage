@@ -1,5 +1,5 @@
 ---
-import { content } from '../data/content';
+import { content, personalInfo } from '../data/content';
 import SectionHeading from './SectionHeading.astro';
 
 const copy = content.es;
@@ -17,15 +17,17 @@ const copy = content.es;
 		<div class="relative mt-12 flex min-h-[510px] flex-col overflow-hidden border border-pale-stale/25 bg-pale-stale p-6 text-evergreen sm:mt-16 sm:p-10 lg:mt-0 lg:min-h-[420px] lg:p-14">
 			<div class="pointer-events-none absolute -right-40 -top-64 size-[36rem] rounded-full border border-yale-blue/30 shadow-[0_0_0_4rem_rgba(0,83,119,0.08),0_0_0_8rem_rgba(0,83,119,0.05)]" aria-hidden="true"></div>
 			<p class="relative z-10 max-w-[600px] font-display text-[clamp(1.65rem,3vw,3.2rem)] font-medium leading-none tracking-[-0.07em] text-evergreen" data-i18n="contact.body">{copy.contact.body}</p>
-			<a class="group relative z-10 mt-11 inline-flex min-h-12 items-center gap-4 bg-yale-blue px-4 py-3 font-mono text-[clamp(1rem,2vw,1.35rem)] tracking-[-0.04em] text-pale-stale shadow-lg shadow-yale-blue/20 transition-colors duration-200 hover:bg-oxford-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-oxford-navy" href={`mailto:${copy.contact.email}`}>
+			<a class="group relative z-10 mt-11 inline-flex min-h-12 items-center gap-4 bg-yale-blue px-4 py-3 font-mono text-[clamp(1rem,2vw,1.35rem)] tracking-[-0.04em] text-pale-stale shadow-lg shadow-yale-blue/20 transition-colors duration-200 hover:bg-oxford-navy focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-oxford-navy" href={`mailto:${personalInfo.email}`}>
 				<span data-i18n="contact.email">{copy.contact.email}</span>
 				<span class="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
 			</a>
 			<div class="relative z-10 mt-auto flex flex-col items-start gap-5 border-t border-evergreen/20 pt-10 font-mono text-[10px] text-evergreen/75 sm:flex-row sm:items-end sm:justify-between">
 				<span class="max-w-[310px]" data-i18n="contact.availability">{copy.contact.availability}</span>
-				<div class="flex gap-4">
-					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href="https://www.linkedin.com/in/enrique-gamboa-hernandez/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href="https://github.com/engaherr" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+				<div class="flex flex-wrap gap-x-5 gap-y-3">
+					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href={personalInfo.phoneHref}><span data-i18n="contact.phoneLabel">{copy.contact.phoneLabel}</span>: {personalInfo.phone}</a>
+					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href={personalInfo.social.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href={personalInfo.social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+					<a class="text-oxford-navy transition-colors hover:text-dark-spruce" href={personalInfo.social.timeline} target="_blank" rel="noreferrer"><span data-i18n="contact.timelineLabel">{copy.contact.timelineLabel}</span> <span aria-hidden="true">↗</span></a>
 				</div>
 			</div>
 		</div>

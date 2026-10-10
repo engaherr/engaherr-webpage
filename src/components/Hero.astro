@@ -1,5 +1,5 @@
 ---
-import { content } from '../data/content';
+import { content, personalInfo } from '../data/content';
 
 const copy = content.es;
 ---
@@ -37,6 +37,14 @@ const copy = content.es;
 				<span class="text-pale-stale/30" aria-hidden="true">/</span>
 				<span data-i18n="hero.location">{copy.hero.location}</span>
 			</div>
+
+			<ul class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2.5 font-mono text-[10px] uppercase tracking-[0.045em] text-pale-stale/75">
+				<li><a class="transition-colors duration-200 hover:text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a></li>
+				<li><a class="transition-colors duration-200 hover:text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href={personalInfo.phoneHref}><span data-i18n="contact.phoneLabel">{copy.contact.phoneLabel}</span> {personalInfo.phone}</a></li>
+				<li><a class="transition-colors duration-200 hover:text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href={personalInfo.social.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+				<li><a class="transition-colors duration-200 hover:text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href={personalInfo.social.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></li>
+				<li><a class="transition-colors duration-200 hover:text-pale-stale focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-pale-stale" href={personalInfo.social.timeline} target="_blank" rel="noreferrer"><span data-i18n="contact.timelineLabel">{copy.contact.timelineLabel}</span> <span aria-hidden="true">↗</span></a></li>
+			</ul>
 		</div>
 
 		<div class="relative mx-auto aspect-square w-full max-w-[530px] overflow-hidden border border-pale-stale/15 bg-oxford-navy bg-[radial-gradient(circle_at_center,rgba(0,83,119,0.36),transparent_38%),linear-gradient(135deg,rgba(0,83,119,0.2),transparent_32%)] motion-safe:animate-zoom-in motion-safe:animate-duration-slower" aria-label={copy.hero.mapLabel} data-i18n-attr="aria-label:hero.mapLabel" role="img">
